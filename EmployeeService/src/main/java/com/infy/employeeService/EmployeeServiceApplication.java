@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource(value = { "message.properties" })
+@PropertySource(value = { "classpath:message.properties" })
 public class EmployeeServiceApplication {
 
 	public static void main(String[] args) {
