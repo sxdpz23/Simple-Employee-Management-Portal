@@ -1,0 +1,16 @@
+<div class="root">
+    <div class="top">
+        <p>{{ title }}</p>
+    </div>
+
+    <div id="bottom">
+        <div id="divider"></div>
+        <div class="buttons">
+            <button class="button" *ngFor="let button of buttonsList" id="button{{+buttonsList.indexOf(button)}}" (click)="navigateTo(button.navigation)" >
+                <i-feather name="{{button.icon}}"></i-feather>
+                <br>
+                <p>{{button.title.toUpperCase()}}</p>
+            </button>
+        </div>
+    </div>
+</div>
