@@ -7,19 +7,24 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 
 const routes: Routes = [
-  { path:'dashboard', component: HomeComponent, children:[
+  { path:'dashboard', children:[
+    { path:'', component: HomeComponent},
     { path:'addEmployee', component: AddEmployeeComponent },
     { path:'viewEmployees', component: ViewEmployeeComponent },
     { path:'deleteEmployee', component: DeleteEmployeeComponent },
     { path:'updateEmployeeDetails', component: UpdateEmployeeComponent }
   ] },
-  { path: '', redirectTo: '/dashboard', pathMatch:'full' }
+  { path: '', redirectTo: '/dashboard', pathMatch:'full' },
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
-    // RouterModule.forChild(routesC)
+    RouterModule.forRoot(routes, {
+      onSameUrlNavigation: 'reload'
+    }),
+    // RouterModule.forChild(routes)
   ],
   exports: [RouterModule]
 })
