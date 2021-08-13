@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddEmployeeComponent } from './add-employee/add-employee.component';
-import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
+import { AddEmployeeComponent } from './operations/add-employee/add-employee.component';
+import { DeleteEmployeeComponent } from './operations/delete-employee/delete-employee.component';
 import { HomeComponent } from './home/home.component';
-import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
-import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { UpdateEmployeeComponent } from './operations/update-employee/update-employee.component';
+import { ViewEmployeeComponent } from './operations/view-employee/view-employee.component';
+import { OperationsComponent } from './operations/operations.component';
 
 const routes: Routes = [
   { path:'dashboard', children:[
-    { path:'', component: HomeComponent},
-    { path:'addEmployee', component: AddEmployeeComponent },
+    { path:'', component: HomeComponent },
+    { path:'**', component: OperationsComponent },
     { path:'viewEmployees', component: ViewEmployeeComponent },
     { path:'deleteEmployee', component: DeleteEmployeeComponent },
     { path:'updateEmployeeDetails', component: UpdateEmployeeComponent }

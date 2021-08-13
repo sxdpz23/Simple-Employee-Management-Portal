@@ -2,8 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const HOST: string = "localhost"
+const PORT: number = 3333
+const APP: string = "/e-service"
+
 export const environment = {
-  production: false
+  production: false,
+
+  employeeAPIUrl: 'http://'+ HOST + ':' + PORT + APP + '/employees'
 };
 
 /*

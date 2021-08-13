@@ -26,13 +26,14 @@ export class HomeComponent implements OnInit {
     bottomPart!.style.transform = 'translate( 0%, 100%)'
     let buttons = document.getElementsByClassName('button')
     for (let i: number = 0; i < buttons.length; i++) {
-      document.getElementById(buttons[i].id)!.style.opacity = '0'
+      (<HTMLElement>buttons[i]).style.opacity = '0'
     }
     document.getElementById('top')!.style.opacity = '0'
     setTimeout(() => {
       bottomPart!.style.display = 'none'
       document.getElementById('divider')!.style.display = 'none'
     }, 1000)
+    
     setTimeout(() => { this.router.navigate(['dashboard' + link]) }, 1100)
   }
 

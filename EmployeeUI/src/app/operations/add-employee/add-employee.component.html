@@ -1,0 +1,24 @@
+<div class="root">
+    <div id="header">
+        <div id="title">
+            <p>Add a New Employee</p>
+            <div></div>
+            <p class="subtitle">EMPLOYEE PORTAL</p>
+        </div>
+        <button id="submit" (click)="addEmployee()">
+            <p>SUBMIT</p><i-feather name="check"></i-feather>
+        </button>
+    </div>
+
+    <div class="screen">
+        <div class="details">
+            
+        </div>
+        <div *ngIf = "this.successMessage!=''" id="success">
+            <p>{{successMessage}}</p>
+        </div>
+        <div *ngIf = "this.errorMessage!=''" id="error">
+            <p>{{errorMessage}}</p>
+        </div>
+    </div>
+</div>

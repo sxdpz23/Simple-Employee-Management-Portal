@@ -14,12 +14,9 @@
 }
 
 #top p { 
-    top: 25%;
-    left: 50%;
     font-size: 5vw;
     letter-spacing: 2px;
-	transform: translate( -50%, -50%);
-    position: absolute;
+	transform: translate( 0%, 180%);
 }
 
 #bottom {
@@ -42,7 +39,8 @@
 }
 
 button {
-    background-color: #0a3f70;
+    /* background-color: #0a3f70; */
+    background-image: linear-gradient( rgba(0, 100, 255, .5), #008, #007, #006, #005, #004);
     color: #fff;
     border: 0px;
     border-radius: 10px;
@@ -54,6 +52,10 @@ button {
     text-align: center;
     letter-spacing: 2px;
     transition: 600ms;
+}
+
+button:hover {
+    box-shadow: 10px 0px 30px rgba(0,0,100,0.4), -10px 0px 30px rgba(0,0,100,0.4);
 }
 
 i-feather {

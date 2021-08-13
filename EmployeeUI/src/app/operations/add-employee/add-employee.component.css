@@ -1,0 +1,94 @@
+.root {
+    height: 90vh;
+    width: 75vw;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20vw;
+    overflow-x: clip;
+  }
+  
+  #header {
+    margin-top: 6vh;
+    height: auto;
+    letter-spacing: 2px;
+  }
+  
+  #title {
+    display: block;
+    text-align: left;
+    width: inherit;
+    font-size: 2.8vw;
+    width: 40vw;
+    color: #003261;
+  }
+  
+  #title div {
+    height: 1vh;
+  }
+  
+  .subtitle {
+    font-size: 1.5vw;
+  }
+  
+  #submit {
+      /* background-color: #0A700E; */
+      background-image: linear-gradient( rgba(0, 255, 100, .5), #0b0, #0a0, #090, #080, #070);
+      color: #fff;
+      height: 8vh;
+      width: 15vw;
+      position: absolute;
+      border-radius: 10px;
+      top: 9vh;
+      right: 8vw;
+      border: 0px;
+      transition: 500ms;
+  }
+  
+  #submit:hover {
+    box-shadow: 5px 5px 30px rgba(0, 119, 40, 0.7);
+  }
+  
+  #submit > p {
+      margin-left: 2vw;
+      letter-spacing: 2px;
+  }
+  
+  #submit > i-feather {
+      position: absolute;
+      top: 30%;
+      left: 25%;
+  }
+  
+  .screen {
+    min-height: 30vh;
+    width: 66vw;
+    margin-top: 10vh;
+    margin-left: 3vw;
+  }
+  
+  .details {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5px;
+    padding: 3vh 2vw 4vh 2vw;
+    margin-top: 4vh;
+    letter-spacing: 2px;
+    line-height: 3vh;
+    color: #0a3f70;
+  }
+  
+  #success {
+      color: #0A700E;
+  }
+  
+  #error, #success {
+      margin: 4vh 0px;
+      color: #700A0A;
+      font-style: italic;
+      text-align: left;
+      font-weight: bold;
+  }

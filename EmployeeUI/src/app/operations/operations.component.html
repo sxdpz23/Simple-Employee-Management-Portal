@@ -1,0 +1,23 @@
+<div class="root">
+    <div class="screen">
+        <div *ngIf="link=='addEmployee'">
+            <app-add-employee></app-add-employee>
+        </div>
+        <div *ngIf="link=='viewEmployees'">
+            <app-view-employee></app-view-employee>
+        </div>
+        <div *ngIf="link=='updateEmployeeDetails'">
+            <app-update-employee></app-update-employee>
+        </div>
+        <div *ngIf="link=='deleteEmployee'">
+            <app-delete-employee></app-delete-employee>
+        </div>
+    </div>
+    
+    <button id="back" (click)="goBack()">
+        <i-feather name="chevrons-left"></i-feather>
+        <br>
+        <p>BACK</p>
+    </button>
+</div>
+

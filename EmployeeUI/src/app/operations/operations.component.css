@@ -1,0 +1,41 @@
+.root {
+    /* background-color:#A8D5FF; */
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    /* background-color: #0a3f70; */
+    background-image: linear-gradient( rgba(0, 100, 255, .5), #009, #008, #007, #006, #005, #004);
+    color: #fff;
+    border: 0px;
+    border-bottom-right-radius: 30px;
+    height: 15vw;
+    width: 15vw;
+    padding: 2vw;
+    font-size: 1.5vw;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: 600ms;
+    position: relative;
+}
+
+button:hover {
+    box-shadow: 10px 10px 40px rgba(0,0,100,0.7);
+}
+
+i-feather {
+    height: 6vh;
+    width: 6vh;
+    margin-bottom: 3vh;
+}
+
+.screen {
+    position: absolute;
+    text-align: center;
+    height: inherit;
+    width: inherit;
+    transition: 800ms;
+}

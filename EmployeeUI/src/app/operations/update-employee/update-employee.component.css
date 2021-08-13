@@ -1,0 +1,131 @@
+.root {
+  height: 90vh;
+  width: 75vw;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20vw;
+  overflow-x: clip;
+}
+
+#header {
+  margin-top: 6vh;
+  height: auto;
+  letter-spacing: 2px;
+}
+
+#title {
+  display: block;
+  text-align: left;
+  width: inherit;
+  font-size: 2.8vw;
+  width: 40vw;
+  color: #003261;
+}
+
+#title div {
+  height: 1vh;
+}
+
+.subtitle {
+  font-size: 1.5vw;
+}
+
+#update {
+  background-image: linear-gradient(
+    rgba(255, 100, 0, 0.5),
+    rgba(255, 0, 0, 0.7),
+    rgba(255, 0, 0, 0.9)
+  );
+  color: #fff;
+  height: 8vh;
+  width: 15vw;
+  position: absolute;
+  border-radius: 10px;
+  top: 9vh;
+  right: 8vw;
+  border: 0px;
+  display: none;
+  opacity: 0;
+  transition: 500ms;
+}
+
+#update:hover {
+  box-shadow: 5px 5px 30px rgba(240, 0, 0, 0.7);
+}
+
+#update > p {
+  margin-left: 2vw;
+  letter-spacing: 2px;
+}
+
+#update > i-feather {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+#search {
+  background-color: #fff;
+  height: 1vh;
+  width: 18vw;
+  position: absolute;
+  border-radius: 10px;
+  top: 9vh;
+  right: 8vw;
+  overflow: none;
+  display: inline-block;
+  font-size: 1vw;
+  padding: 1.5vh 3vw 3vh 1vw;
+  text-align: left;
+  box-shadow: 5px 5px 30px rgba(0, 0, 100, 0.3);
+  color: #0a3f70;
+  transition: 500ms;
+}
+
+#button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 0px;
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  top: 9.5vh;
+  right: 9vw;
+  text-align: center;
+  transition: 1s;
+}
+
+.screen {
+  min-height: 30vh;
+  width: 66vw;
+  margin-top: 10vh;
+  margin-left: 3vw;
+}
+
+.details {
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 5px;
+  padding: 3vh 2vw 4vh 2vw;
+  margin-top: 4vh;
+  letter-spacing: 2px;
+  line-height: 3vh;
+  color: #0a3f70;
+}
+
+#success {
+  color: #0a700e;
+}
+
+#error,
+#success {
+  margin: 4vh 0px;
+  color: #700a0a;
+  font-style: italic;
+  text-align: left;
+  font-weight: bold;
+}

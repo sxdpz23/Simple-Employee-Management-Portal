@@ -1,0 +1,46 @@
+<div class="root">
+    <div id="header">
+        <div id="title">
+            <p>Remove Employee Details</p>
+            <div></div>
+            <p class="subtitle">EMPLOYEE PORTAL</p>
+        </div>
+        <button id="remove" (click)="removeEmployee()">
+            <p>REMOVE</p><i-feather name="x"></i-feather>
+        </button>
+    </div>
+
+    <div class="screen">
+        <div id="search">
+            <div contenteditable>Search By EmployeeID</div>
+            <button (click)="search()"><i-feather name="search"></i-feather></button> 
+        </div>
+        <p *ngIf="this.employee==undefined">Please enter the employee's id whose details you wish to remove. </p>
+        <div class="details" *ngIf='employee!=undefined && this.errorMessage==""'>
+            <div class="head">
+                <p>{{ '#'+employee.employeeId }}</p>
+            </div>
+            <div class="mid">
+                <p class="details-title">{{ employee.name }}</p>
+                <div class="data">
+                    <p>{{ employee.training.courseName + "  •  " + employee.training.courseCode }}</p>
+                    <p>{{ "Score: " + employee.training.score }}</p>
+                    <p>{{ "Hours Spent: " + employee.training.hoursSpent }}</p>
+                    <p>{{ employee.location }}</p>
+                    <p>{{ employee.phone1 + "  •  " + employee.phone2 }}</p>
+                    <p>{{ employee.email }}</p>
+                </div>
+            </div>
+            <div class="trailing" [style.color]="employee.training.status+''=='STARTED' ? '#700A6D' : '#0A703F'">
+                <p>{{ employee.training.status }}</p>
+                <p id="date" *ngIf="employee.training.dateCompleted!=null">{{ employee.training.dateCompleted.toString() | datePipe }}</p>
+            </div>
+        </div>
+        <div *ngIf = "this.successMessage!=''" id="success">
+            <p>{{successMessage}}</p>
+        </div>
+        <div *ngIf = "this.errorMessage!=''" id="error">
+            <p>{{errorMessage}}</p>
+        </div>
+    </div>
+</div>

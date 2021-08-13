@@ -1,0 +1,156 @@
+.root {
+  height: 90vh;
+  width: 75vw;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20vw;
+  overflow-x: clip;
+}
+
+#header {
+  margin-top: 6vh;
+  height: auto;
+  letter-spacing: 2px;
+}
+
+#title {
+  display: block;
+  text-align: left;
+  width: inherit;
+  font-size: 2.8vw;
+  width: 40vw;
+  color: #003261;
+}
+
+#title div {
+  height: 1vh;
+}
+
+.subtitle {
+  font-size: 1.5vw;
+}
+
+#remove {
+    /* background-color: #700A0A; */
+    background-image: linear-gradient( rgba(255, 0, 100, .6), rgba(255, 0, 100, .8), #f07);
+    color: #fff;
+    height: 8vh;
+    width: 15vw;
+    position: absolute;
+    border-radius: 10px;
+    top: 9vh;
+    right: 8vw;
+    border: 0px;
+    transition: 500ms;
+}
+
+#remove:hover {
+    box-shadow: 5px 5px 30px rgba(179, 8, 73, 0.7);
+}
+
+#remove > p {
+    margin-left: 2vw;
+    letter-spacing: 2px;
+}
+
+#remove > i-feather {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.screen {
+  min-height: 30vh;
+  width: 66vw;
+  margin-top: 10vh;
+  margin-left: 3vw;
+}
+
+#search { 
+    height: auto;
+    width: 25vw;
+    text-align: right;
+}
+
+#search > div {
+    background-color: #fff;
+    height: 1vh;
+    width: 18vw;
+    border-radius: 10px;
+    font-size: 1vw;
+    padding: 1.8vh 3vw 3vh 1vw;
+    overflow: clip;
+    text-align:left;
+    color: #0A3F70;
+    transition: 500ms;
+}
+
+#search > div:hover {
+    box-shadow: 5px 5px 30px rgba(0, 0, 100, 0.3);
+}
+
+#search > button {
+  background-color: transparent;
+  border: 0px;
+  position: absolute;
+  transform: translate( -5.5vw, -4.2vh)
+}
+
+.screen > p {
+    margin: 4vh 0px;
+    text-align: left;
+    font-style: italic;
+}
+
+.details {
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 5px;
+  padding: 3vh 2vw 4vh 2vw;
+  margin-top: 4vh;
+  letter-spacing: 2px;
+  line-height: 3vh;
+  color: #0a3f70;
+}
+
+.mid {
+  width: 40vw;
+  text-align: left;
+  font-style: italic;
+}
+
+.mid > p {
+  font-weight: bold;
+}
+
+.head,
+.trailing {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+}
+
+.head {
+  width: 6vw;
+  font-weight: 500;
+}
+
+#date {
+  font-size: 0.75em;
+}
+
+#success {
+    color: #0A700E;
+}
+
+#error, #success {
+    margin: 4vh 0px;
+    color: #700A0A;
+    font-style: italic;
+    text-align: left;
+    font-weight: bold;
+}
