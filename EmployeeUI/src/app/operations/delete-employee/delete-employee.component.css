@@ -68,24 +68,25 @@
 
 #search { 
     height: auto;
-    width: 25vw;
-    text-align: right;
+    width: auto;
+    text-align: left;
 }
 
-#search > div {
+#search > input {
     background-color: #fff;
     height: 1vh;
     width: 18vw;
     border-radius: 10px;
-    font-size: 1vw;
-    padding: 1.8vh 3vw 3vh 1vw;
+    font-size: 1.1vw;
+    padding: 2vh 3vw 2.2vh 1vw;
     overflow: clip;
     text-align:left;
     color: #0A3F70;
     transition: 500ms;
+    border: 0px;
 }
 
-#search > div:hover {
+#search > input:hover {
     box-shadow: 5px 5px 30px rgba(0, 0, 100, 0.3);
 }
 
@@ -93,7 +94,7 @@
   background-color: transparent;
   border: 0px;
   position: absolute;
-  transform: translate( -5.5vw, -4.2vh)
+  transform: translate( -2.5vw, 1vh)
 }
 
 .screen > p {

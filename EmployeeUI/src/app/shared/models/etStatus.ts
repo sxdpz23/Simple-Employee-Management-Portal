@@ -1,5 +1,5 @@
 
 export enum ETStatus {
-    STARTED = 'started',
-    COMPLETED = 'completed'
+    STARTED = 'STARTED',
+    COMPLETED = 'COMPLETED'
 }

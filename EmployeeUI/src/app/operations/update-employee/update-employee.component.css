@@ -3,7 +3,6 @@
   width: 75vw;
   margin: 0px;
   padding: 0px;
-  margin-left: 20vw;
   overflow-x: clip;
 }
 
@@ -11,6 +10,7 @@
   margin-top: 6vh;
   height: auto;
   letter-spacing: 2px;
+  margin-left: 20vw;
 }
 
 #title {
@@ -67,7 +67,7 @@
 #search {
   background-color: #fff;
   height: 1vh;
-  width: 18vw;
+  width: 16vw;
   position: absolute;
   border-radius: 10px;
   top: 9vh;
@@ -75,11 +75,12 @@
   overflow: none;
   display: inline-block;
   font-size: 1vw;
-  padding: 1.5vh 3vw 3vh 1vw;
+  padding: 2vh 3vw 2vh 1vw;
   text-align: left;
   box-shadow: 5px 5px 30px rgba(0, 0, 100, 0.3);
   color: #0a3f70;
   transition: 500ms;
+  border: 0px;
 }
 
 #button {
@@ -89,7 +90,7 @@
   height: 5vh;
   width: 5vh;
   position: absolute;
-  top: 9.5vh;
+  top: 9.2vh;
   right: 9vw;
   text-align: center;
   transition: 1s;
@@ -97,19 +98,26 @@
 
 .screen {
   min-height: 30vh;
-  width: 66vw;
-  margin-top: 10vh;
-  margin-left: 3vw;
+  width: 75vw;
+  margin: 5vh 10vw;
+  position: absolute;
+}
+
+#pre-ev {
+  width: inherit;
+  text-align: left;
+  font-style: italic;
+  margin-left: 10vw;
+  color: #0a3f70;
 }
 
 .details {
   height: auto;
   width: auto;
   border-radius: 10px;
-  background-color: #fff;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 5px;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0px;
   padding: 3vh 2vw 4vh 2vw;
   margin-top: 4vh;
   letter-spacing: 2px;
@@ -117,15 +125,87 @@
   color: #0a3f70;
 }
 
-#success {
-  color: #0a700e;
+.titles {
+  text-align:right;
+  width: 15vw;
+  margin-top: 1.1vh;
+}
+
+.titles > div {
+  height: 5vh;
+  margin-top: 2vh;
+}
+
+.data {
+  text-align:left;
+  width: 58vw;
+}
+
+.boxes{
+  background-color: #fff;
+  height: 1vh;
+  width: 20vw;
+  border-radius: 10px;
+  overflow: none;
+  font-size: 1vw;
+  padding: 2vh 1vw 2vh 1vw;
+  text-align: left;
+  color: #0A3F70;
+  border: 0px;
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
+
+#special {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0px;
+  height: inherit;
+  width: inherit;
+}
+
+#special > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0px;
+}
+
+#switcher {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0px;
+  padding: 0px;
+  height: 5vh;
+  width: 16vw;
+  border-radius: 10px;
+}
+
+#switcher > button {
+  height: auto;
+  border: 0px;
+  width: auto;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: 500ms;
+  color: #0A3F70;
+}
+
+#date-title {
+  height: 5vh;
+  margin-top: 3.1vh;
+  margin-left: -8vw;
+  text-align: right;
 }
 
 #error,
 #success {
-  margin: 4vh 0px;
+  margin: 4vh 10vw;
   color: #700a0a;
   font-style: italic;
   text-align: left;
   font-weight: bold;
+}
+
+#success {
+  color: #0a700e;
 }

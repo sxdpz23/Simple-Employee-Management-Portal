@@ -11,14 +11,56 @@
     </div>
 
     <div class="screen">
-        <div class="details">
-            
-        </div>
-        <div *ngIf = "this.successMessage!=''" id="success">
+        <div *ngIf = "this.successMessage!=undefined" id="success">
             <p>{{successMessage}}</p>
         </div>
-        <div *ngIf = "this.errorMessage!=''" id="error">
+        <div *ngIf = "this.errorMessage!=undefined" id="error">
             <p>{{errorMessage}}</p>
+        </div>
+        <div class="details" *ngIf="this.successMessage!=''">
+            <div class="titles">
+                <div *ngFor="let heading of titles">
+                    <p>{{ heading.toUpperCase() }}</p>
+                </div>
+            </div>
+            <div class="data">
+                <input class="boxes" [(ngModel)]="employeeToAdd.name" type="text" placeholder="John Doe">
+                <span *ngIf="nameT+''!='false'" >{{ nameT }}</span>
+                <br>
+                <div>
+                    <input class="boxes" [(ngModel)]="employeeToAdd.training.courseName" type="text" placeholder="SpringBoot-Angular">
+                    <input class="boxes" [(ngModel)]="employeeToAdd.training.courseCode" type="text" placeholder="1000" [style.width]="'5vw'">
+                    <span *ngIf="courseCodeT+''!='false'" >{{ courseCodeT }}</span>
+                </div>
+                <input class="boxes" [(ngModel)]="employeeToAdd.location" type="text" placeholder="Mumbai" [style.width]="'10vw'">
+                <span *ngIf="locationT+''!='false'" >{{ locationT }}</span>
+                <br>
+                <input class="boxes" [(ngModel)]="employeeToAdd.training.score" type="text" placeholder="A+" [style.width]="'2vw'">
+                <span *ngIf="scoreT+''!='false'" >{{ scoreT }}</span>
+                <br>
+                <input class="boxes" [(ngModel)]="employeeToAdd.training.hoursSpent" type="number" placeholder="30" [style.width]="'3vw'">
+                <span *ngIf="hoursSpentT+''!='false'" >{{ hoursSpentT }}</span>
+                <br>
+                <div id="special">
+                    <div>
+                        <div id="switcher" class="boxes">
+                            <button id="started" class="options" (click)="onStatus('STARTED')">STARTED</button>
+                            <button id="completed" class="options" (click)="onStatus('COMPLETED')">COMPLETED</button>
+                        </div>
+                        <p id="date-title" *ngIf="employeeToAdd.training.status+''=='COMPLETED'">DATE COMPLETED</p>
+                    </div>
+                    <input class="boxes" [(ngModel)]="employeeToAdd.training.dateCompleted" type="date" [style.width]="'10vw'" *ngIf="employeeToAdd.training.status+''=='COMPLETED'">
+                    <span *ngIf="courseCodeT+''!='false'" >{{ courseCodeT }}</span>
+                </div>
+                <div>
+                    <input class="boxes" [(ngModel)]="employeeToAdd.phone1" type="text" placeholder="9876543201">
+                    <input class="boxes" [(ngModel)]="employeeToAdd.phone2" type="text" placeholder="Alternate Number">
+                    <span *ngIf="courseCodeT+''!='false'" >{{ courseCodeT }}</span>
+                </div>
+                <input class="boxes" [(ngModel)]="employeeToAdd.email" type="text" placeholder="john.doe@infosys.com or john.doe01@ad.infosys.com" [style.width]="'25vw'">
+                <span *ngIf="emailT+''!='false'" >{{ emailT }}</span>
+                <br>
+            </div>
         </div>
     </div>
 </div>

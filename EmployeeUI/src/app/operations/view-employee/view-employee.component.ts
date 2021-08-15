@@ -12,6 +12,7 @@ export class ViewEmployeeComponent implements OnInit {
   employees: Employee[] = []
   errorMessage: String = ''
   successMessage: String = ''
+  searchText!: string
 
   constructor(private service: EmployeeService) { }
 
@@ -25,11 +26,11 @@ export class ViewEmployeeComponent implements OnInit {
     this.successMessage = ''
     this.errorMessage = ''
     this.employees = []
-    const text = document.getElementById('search')!.innerText
-    if(text.trim()==='')
+    // const text = document.getElementById('search')!.innerText
+    if(this.searchText.trim()==='')
       this.ngOnInit()
     else {
-      let employeeId = parseInt(text)
+      let employeeId = parseInt(this.searchText)
       if (!isNaN(employeeId))
         this.service.getService(employeeId).subscribe(
           employee => this.employees = [employee],

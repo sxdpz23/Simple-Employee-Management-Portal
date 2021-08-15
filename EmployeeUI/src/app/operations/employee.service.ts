@@ -36,23 +36,28 @@ export class EmployeeService {
 
   private handleError(error: HttpErrorResponse) {
     let errorMsg: string = ''
-    if (error.status == 400)
-      errorMsg = 'The request can not be processed at the moment. Please try again later or connect with administrator.'
-    // else if (error.status == 404)
-    //   errorMsg = 'The resources you are looking for is not available. Please try again later or connect with administrator.'
-    else {
-      if (error.error instanceof Error) 
-        errorMsg = error.error.message
-      else if (typeof error.message === 'string') 
-        errorMsg = error.error
-        // errorMsg = JSON.parse(error.error).message
-      else {
-        if (error.status == 0)
-          errorMsg = 'A connection to backend cannot be established.'
-        else
-          errorMsg = error.error.message
-      }
+    // if (error.status == 400)
+    //   errorMsg = 'The request can not be processed at the moment. Please try again later or connect with administrator.'
+    // // else if (error.status == 404)
+    // //   errorMsg = 'The resources you are looking for is not available. Please try again later or connect with administrator.'
+    // else {
+    if (error.error instanceof Error) {
+      errorMsg = error.error.message
+      console.log(1)
     }
+    else if (typeof error.message === 'string') {
+      if ((error.error + '').includes('errorMessage'))
+        errorMsg = JSON.parse(error.error).errorMessage
+      else
+        errorMsg = error.error
+    }
+    else {
+      if (error.status == 0)
+        errorMsg = 'A connection to backend cannot be established.'
+      else
+        errorMsg = error.error.message
+    }
+    // }
     return throwError(errorMsg);
   }
 

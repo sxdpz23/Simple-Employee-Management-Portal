@@ -5,7 +5,7 @@
             <div></div>
             <p class="subtitle">EMPLOYEE PORTAL</p>
         </div>
-        <div id="search" contenteditable>Search By EmployeeID</div>
+        <input id="search" [(ngModel)]="searchText" type="text" placeholder="Search By EmployeeID">
         <button id="button" (click)="search()"><i-feather name="search"></i-feather></button>
         <button id="update" (click)="updateEmployee()">
             <p>UPDATE</p><i-feather name="upload-cloud"></i-feather>
@@ -13,14 +13,59 @@
     </div>
 
     <div class="screen">
-        <div class="details">
-            
-        </div>
-        <div *ngIf = "this.successMessage!=''" id="success">
+        <div *ngIf = "this.successMessage!=undefined" id="success">
             <p>{{successMessage}}</p>
         </div>
-        <div *ngIf = "this.errorMessage!=''" id="error">
+        <div *ngIf = "this.errorMessage!=undefined" id="error">
             <p>{{errorMessage}}</p>
+        </div>
+        <div id="pre-ev" *ngIf="this.employee.name==undefined">
+            <p>Please search an EmployeeID whose details you wanna update</p>
+        </div>
+        <div class="details" *ngIf="this.employee.name!=undefined">
+            <div class="titles">
+                <div *ngFor="let heading of titles">
+                    <p>{{ heading.toUpperCase() }}</p>
+                </div>
+            </div>
+            <div class="data">
+                <input class="boxes" [(ngModel)]="employee.name" type="text" placeholder="John Doe">
+                <span *ngIf="nameT+''!='false'" >{{ nameT }}</span>
+                <br>
+                <div>
+                    <input class="boxes" [(ngModel)]="employee.training.courseName" type="text" placeholder="SpringBoot-Angular">
+                    <input class="boxes" [(ngModel)]="employee.training.courseCode" type="text" placeholder="1000" [style.width]="'5vw'">
+                    <span *ngIf="courseCodeT+''!='false'" >{{ courseCodeT }}</span>
+                </div>
+                <input class="boxes" [(ngModel)]="employee.location" type="text" placeholder="Mumbai" [style.width]="'10vw'">
+                <span *ngIf="locationT+''!='false'" >{{ locationT }}</span>
+                <br>
+                <input class="boxes" [(ngModel)]="employee.training.score" type="text" placeholder="A+" [style.width]="'2vw'">
+                <span *ngIf="scoreT+''!='false'" >{{ scoreT }}</span>
+                <br>
+                <input class="boxes" [(ngModel)]="employee.training.hoursSpent" type="number" placeholder="30" [style.width]="'3vw'">
+                <span *ngIf="hoursSpentT+''!='false'" >{{ hoursSpentT }}</span>
+                <br>
+                <div id="special">
+                    <div>
+                        <div id="switcher" class="boxes">
+                            <button id="started" class="options" (click)="onStatus('STARTED')">STARTED</button>
+                            <button id="completed" class="options" (click)="onStatus('COMPLETED')">COMPLETED</button>
+                        </div>
+                        <p id="date-title" *ngIf="employee.training.status+''=='COMPLETED'">DATE COMPLETED</p>
+                    </div>
+                    <input class="boxes" [(ngModel)]="employee.training.dateCompleted" type="date" [style.width]="'10vw'" *ngIf="employee.training.status+''=='COMPLETED'">
+                    <span *ngIf="courseCodeT+''!='false'" >{{ courseCodeT }}</span>
+                </div>
+                <div>
+                    <input class="boxes" [(ngModel)]="employee.phone1" type="text" placeholder="9876543201">
+                    <input class="boxes" [(ngModel)]="employee.phone2" type="text" placeholder="Alternate Number">
+                    <span *ngIf="courseCodeT+''!='false'" >{{ courseCodeT }}</span>
+                </div>
+                <input class="boxes" [(ngModel)]="employee.email" type="text" placeholder="john.doe@infosys.com or john.doe01@ad.infosys.com" [style.width]="'25vw'">
+                <span *ngIf="emailT+''!='false'" >{{ emailT }}</span>
+                <br>
+            </div>
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@
 
     <div class="screen">
         <div id="search">
-            <div contenteditable>Search By EmployeeID</div>
+            <input [(ngModel)]="searchText" type="text" placeholder="Search By EmployeeID">
             <button (click)="search()"><i-feather name="search"></i-feather></button> 
         </div>
         <p *ngIf="this.employee==undefined">Please enter the employee's id whose details you wish to remove. </p>

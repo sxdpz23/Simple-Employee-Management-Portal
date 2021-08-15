@@ -5,7 +5,7 @@
             <div></div>
             <p class="subtitle">EMPLOYEE PORTAL</p>
         </div>
-        <div id="search" contenteditable>Search By EmployeeID</div>
+        <input [(ngModel)]="searchText" type="text" placeholder="Search By EmployeeID">
         <button (click)="search()"><i-feather name="search"></i-feather></button>
     </div>
 

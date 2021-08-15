@@ -9,9 +9,10 @@ import { EmployeeService } from '../employee.service';
 })
 export class DeleteEmployeeComponent implements OnInit {
 
-  employee: Employee | undefined ;
+  employee!: Employee | undefined
   errorMessage: String = ''
   successMessage: String = ''
+  searchText!: string
 
   constructor(private service: EmployeeService) { }
 
@@ -21,8 +22,7 @@ export class DeleteEmployeeComponent implements OnInit {
     this.successMessage = ''
     this.errorMessage = ''
     this.employee = undefined
-    const text = document.getElementById('search')!.innerText
-    let employeeId = parseInt(text)
+    let employeeId = parseInt(this.searchText)
     if (!isNaN(employeeId))
       this.service.getService(employeeId).subscribe(
         employee => this.employee = employee,

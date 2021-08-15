@@ -30,7 +30,7 @@
   font-size: 1.5vw;
 }
 
-#search {
+input {
   background-color: #fff;
   height: 1vh;
   width: 18vw;
@@ -41,10 +41,11 @@
   overflow: none;
   display: inline-block;
   font-size: 1vw;
-  padding: 1.5vh 3vw 3vh 1vw;
+  padding: 2vh 3vw 2.5vh 1vw;
   text-align: left;
   box-shadow: 5px 5px 30px rgba(0, 0, 100, 0.3);
   color: #0A3F70;
+  border: 0px;
 }
 
 i-feather {
